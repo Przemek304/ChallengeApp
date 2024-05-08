@@ -10,10 +10,10 @@ user1.AddScore(7);
 user1.AddScore(6);
 user1.AddScore(2);
 
-user2.AddScore(3);
-user2.AddScore(2);
-user2.AddScore(3);
-user2.AddScore(1);
+user2.AddScore(9);
+user2.AddScore(9);
+user2.AddScore(9);
+user2.AddScore(9);
 user2.AddScore(9);
 
 user3.AddScore(1);
@@ -37,6 +37,7 @@ foreach (var user in users)
     if(user.Result > maxResult)
     {
         userWithMaxResult = user;
+        maxResult = user.Result;
     }
 }
 
