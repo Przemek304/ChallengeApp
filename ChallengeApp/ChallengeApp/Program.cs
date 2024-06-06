@@ -9,7 +9,7 @@ user1.AddScore(9);
 user1.AddScore(7);
 
 user2.AddScore(9);
-user2.AddScore(9);
+user2.AddScore(9);     
 user2.AddScore(9);
 
 user3.AddScore(1);

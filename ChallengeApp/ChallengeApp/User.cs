@@ -1,18 +1,24 @@
 ﻿
 
-using System.Runtime.InteropServices;
+
 
 namespace ChallengeApp
 {
-   
+
     public class User
     {
         private List<int> score = new List<int>();
+
+        public User(string login)
+        {
+            this.Login = login;
+        }
+
+
         public User(string login, string password)
         {
             this.Login = login;
             this.Password = password;
-
         }
 
 
@@ -27,6 +33,7 @@ namespace ChallengeApp
             }
         }
 
+
         public void AddScore(int number)
         {
 
@@ -34,4 +41,3 @@ namespace ChallengeApp
         }
     }
 }
-d
