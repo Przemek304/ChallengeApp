@@ -21,7 +21,7 @@ namespace ChallengeApp.Tests
             var statistisc = employee.GetStatistics();
 
             //  assert
-            Assert.AreEqual(6,statistisc.Average);
+            Assert.AreEqual(6f,statistisc.Average);
         } 
 
         [Test]
