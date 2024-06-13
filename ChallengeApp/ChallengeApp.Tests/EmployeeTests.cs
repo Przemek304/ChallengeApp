@@ -5,57 +5,57 @@ namespace ChallengeApp.Tests
 
     public class EmployeeTests
     {
-        private Statistisc statistisc;
+        private Statistics statistisc;
         [Test]
-        public void cos1()
+        public void WhenEmployeeCollectCorrectGrade_ThenCorrectGrade()
         {
              
             //  arrange
-            Employee employee = new Employee("Robert" , "Kowalski" );
-            employee.AddGrade(5);
-            employee.AddGrade(3);
-            employee.AddGrade(1);
+            Employee employee = new Employee("Adam" , "Kowalski" );
+            employee.AddGrades(4);
+            employee.AddGrades(8);
+            employee.AddGrades(6);
 
 
             //  act
-            var statistisc = employee.GetStatistisc();
+            var statistisc = employee.GetStatistics();
 
             //  assert
-            Assert.AreEqual(5,statistisc.Average);
-        } d
+            Assert.AreEqual(6,statistisc.Average);
+        } 
 
         [Test]
-        public void cos2()
+        public void WhenEmployee2CollectCorrectGrade_ThenCorrectGrade()
         {
 
             //  arrange
-           Employee employee = new Employee("Michał" , "Las");
-            employee.AddGrade(5);
-            employee.AddGrade(5);
-            employee.AddGrade(5);
+           Employee employee = new Employee("Adam" , "Kowalski");
+            employee.AddGrades(4);
+            employee.AddGrades(8);
+            employee.AddGrades(6);
             //  act
-            var statistisc = employee.GetStatistisc();
+            var statistisc = employee.GetStatistics();
 
-            S
+            
             //  assert
-            Assert.AreNotEqual(5 , statistisc.Min);
+            Assert.AreEqual(4 , statistisc.Min);
         }
 
         [Test]
-        public void cos3()
+        public void WhenEmployee3CollectCorrectGrade_ThenCorrectGrade()
         {
 
             //  arrange
-            Employee employee = new Employee("Kamil", "Nowak");
-            employee.AddGrade(-6);
-            employee.AddGrade(3);
-            employee.AddGrade(-5);
+            Employee employee = new Employee("Adam", "Kowalski");
+            employee.AddGrades(4);
+            employee.AddGrades(8);
+            employee.AddGrades(6);
             //  act
-            var statistisc = employee.GetStatistisc();
+            var statistisc = employee.GetStatistics();
 
 
             //  assert
-            Assert.AreNotEqual(6, statistisc.Max);
+            Assert.AreEqual(8, statistisc.Max);
         }
 
 
