@@ -7,7 +7,7 @@ Console.WriteLine("============================================");
 Console.WriteLine();
 
 
-Console.WriteLine("Podaj Imię racownika   ");
+Console.WriteLine("Podaj Imię racownika  ");
 var name = Console.ReadLine();
 
 Console.WriteLine();

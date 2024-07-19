@@ -8,7 +8,7 @@ namespace CHallengeApp
     {
 
 
-        private const string fileName = "grades.txt";
+        private const string fileName  = "grades.txt";
         public EmployeeInFile(string name, string surename)
             : base(name, surename)
         {

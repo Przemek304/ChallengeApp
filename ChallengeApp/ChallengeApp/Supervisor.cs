@@ -5,7 +5,7 @@ namespace CHallengeApp
 {
     // kierownik podobny do klasy employee ale ma obsłużoną metode addgrade typu string 
     // i nowy zakres  liczb
-    public class Supervisor : IEmployee
+    public class Supervisor :   IEmployee
     {
         List<float> grade = new List<float>();
         public string Name => "Adam";

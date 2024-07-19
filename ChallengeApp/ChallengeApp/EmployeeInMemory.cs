@@ -6,7 +6,7 @@ namespace CHalleneApp
     // przejżeć tą klase żeby wiedzieć po co ona jest , o co w niej chodzi
     public class EmployeeInMemory : EmployeeBase
     {
-        List<float> grades = new List<float>();
+        List<float> grades = new  List<float>();
         public EmployeeInMemory(string name, string surename)
             : base(name, surename)
         {
