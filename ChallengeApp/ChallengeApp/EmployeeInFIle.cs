@@ -11,8 +11,8 @@ namespace CHallengeApp
         private const string fileName  = "grades.txt";
         public EmployeeInFile(string name, string surename)
             : base(name, surename)
-        {
-        }
+        {                                              
+        }                            
 
         public override void AddGrade(float grade)
         {

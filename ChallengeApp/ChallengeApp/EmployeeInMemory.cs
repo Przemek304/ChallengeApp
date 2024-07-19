@@ -11,7 +11,7 @@ namespace CHalleneApp
             : base(name, surename)
         {
         }
-
+         
         public override void AddGrade(int grade)
         {
             float value = (float)grade;

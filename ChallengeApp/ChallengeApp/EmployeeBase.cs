@@ -3,13 +3,13 @@
 namespace ChallengeApp;
 
 // przejżeć tą klase żeby wiedzieć co i  jak
-public abstract class EmployeeBase : IEmployee
+public abstract class EmployeeBase : IEmployee                   
 {
     public EmployeeBase(string name, string surename)
     {
         this.Name = name;
         this.SureName = surename;
-    }
+    }                           
     public string Name { get; set; }
     public string SureName { get; set; }
 

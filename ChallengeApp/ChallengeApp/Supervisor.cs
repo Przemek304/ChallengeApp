@@ -15,7 +15,7 @@ namespace CHallengeApp
         public void AddGrade(int grade)
         {
             float value = grade;
-            this.AddGrade(value);
+            this.AddGrade(value);                
         }
 
         public void AddGrade(float grade)
