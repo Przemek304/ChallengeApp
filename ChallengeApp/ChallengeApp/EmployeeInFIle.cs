@@ -2,11 +2,14 @@
 
 using ChallengeApp;
 
-namespace CHallengeApp
+namespace ChallengeApp
 {
     public class EmployeeInFile : EmployeeBase
     {
+        public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
+        public event GradeAddedDelegate GradeAdded;
+        List<float> grades = new List<float>();
 
         private const string fileName  = "grades.txt";
         public EmployeeInFile(string name, string surename)
@@ -18,9 +21,11 @@ namespace CHallengeApp
         {
             if (grade >= 0 && grade <= 100)
             {
-                using (var writer = File.AppendText($"{fileName}"))
+                this.grades.Add(grade);
+
+                if (GradeAdded != null)
                 {
-                    writer.WriteLine(grade);
+                    GradeAdded(this, new EventArgs());
                 }
             }
             else

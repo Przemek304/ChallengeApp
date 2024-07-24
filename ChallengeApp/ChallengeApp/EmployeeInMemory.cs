@@ -1,17 +1,23 @@
 ﻿
 using ChallengeApp;
 
-namespace CHalleneApp
+namespace ChalleneApp
 {
     // przejżeć tą klase żeby wiedzieć po co ona jest , o co w niej chodzi
     public class EmployeeInMemory : EmployeeBase
     {
-        List<float> grades = new  List<float>();
+        public delegate void GradeAddedDelegate(object sender , EventArgs args);
+
+        public event GradeAddedDelegate GradeAdded;
+
+        List<float> grades = new List<float>();
         public EmployeeInMemory(string name, string surename)
             : base(name, surename)
         {
+            
         }
-         
+        
+   
         public override void AddGrade(int grade)
         {
             float value = (float)grade;
@@ -22,7 +28,12 @@ namespace CHalleneApp
         {
             if (grade >= 0 && grade <= 100)
             {
-                this.AddGrade(grade);
+                this.grades.Add(grade);
+
+              if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
             }
             else
             {
@@ -30,6 +41,7 @@ namespace CHalleneApp
             }
 
         }
+
 
         public override void AddGrade(double grade)
         {

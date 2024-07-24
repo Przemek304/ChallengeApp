@@ -5,6 +5,9 @@ namespace ChallengeApp;
 // przejżeć tą klase żeby wiedzieć co i  jak
 public abstract class EmployeeBase : IEmployee                   
 {
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+    public event GradeAddedDelegate GradeAdded;
     public EmployeeBase(string name, string surename)
     {
         this.Name = name;

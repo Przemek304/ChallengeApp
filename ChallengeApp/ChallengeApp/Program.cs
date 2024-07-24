@@ -1,5 +1,6 @@
-﻿using CHallengeApp;
-using ChallengeApp;
+﻿using ChalleneApp;
+using System.Runtime.CompilerServices;
+
 
 
 Console.WriteLine("Witamy w Programie XYZ do oceny Pracowników");
@@ -7,7 +8,7 @@ Console.WriteLine("============================================");
 Console.WriteLine();
 
 
-Console.WriteLine("Podaj Imię racownika  ");
+Console.WriteLine("Podaj Imię pracownika  ");
 var name = Console.ReadLine();
 
 Console.WriteLine();
@@ -16,9 +17,19 @@ Console.WriteLine("Podaj Nazwisko Pracownika   ");
 var surename = Console.ReadLine();
 
 
-var employee = new EmployeeInFile(name, surename);
+var employee = new EmployeeInMemory(name, surename);
+employee.GradeAdded += EmployeeGradeAdded;
+employee.GradeAdded += EmployeeGradeAdded;
 
 
+void EmployeeGradeAdded(object sender, EventArgs args)
+{
+    Console.WriteLine("Dodoano Nową Ocenę");
+}
+
+employee.GradeAdded -= EmployeeGradeAdded;
+
+employee.AddGrade(0.6f);
 
 while (true)
 {
@@ -36,6 +47,7 @@ while (true)
     {
         Console.WriteLine($"Exception catched: {e.Message}");
     }
+    
 
 }
 var statistics = employee.GetStatistics();
