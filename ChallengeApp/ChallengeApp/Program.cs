@@ -18,7 +18,7 @@ Console.WriteLine("Podaj Nazwisko Pracownika   ");
 var surename = Console.ReadLine();
 
 
-var employee = new EmployeeInMemory(name, surename);
+var employee = new EmployeeInFile(name, surename);
 employee.GradeAdded += EmployeeGradeAdded;
 
 
@@ -28,8 +28,6 @@ void EmployeeGradeAdded(object sender, EventArgs args)
 }
 
 
-
-employee.AddGrade(0.6f);
 
 while (true)
 {

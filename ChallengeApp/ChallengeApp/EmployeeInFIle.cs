@@ -23,6 +23,12 @@ namespace ChallengeApp
             {
                 this.grades.Add(grade);
 
+                using (var writer = File.AppendText(fileName))
+                {
+                    writer.Write(grade);
+                    writer.Write('\n');
+                }
+
                 if (GradeAdded != null)
                 {
                     GradeAdded(this, new EventArgs());
