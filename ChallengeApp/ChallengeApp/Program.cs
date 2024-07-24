@@ -1,4 +1,5 @@
 ﻿using ChalleneApp;
+using ChallengeApp;
 using System.Runtime.CompilerServices;
 
 
@@ -19,15 +20,14 @@ var surename = Console.ReadLine();
 
 var employee = new EmployeeInMemory(name, surename);
 employee.GradeAdded += EmployeeGradeAdded;
-employee.GradeAdded += EmployeeGradeAdded;
 
 
 void EmployeeGradeAdded(object sender, EventArgs args)
 {
-    Console.WriteLine("Dodoano Nową Ocenę");
+    Console.WriteLine("Dodoano nową ocenę");
 }
 
-employee.GradeAdded -= EmployeeGradeAdded;
+
 
 employee.AddGrade(0.6f);
 

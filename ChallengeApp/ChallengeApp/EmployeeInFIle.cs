@@ -121,7 +121,7 @@ namespace ChallengeApp
         private Statistics CountStatistics(List<float> grades)
         {
             var statistics = new Statistics();
-            statistics.Average =
+            statistics.Average = 0;
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
 
@@ -137,7 +137,7 @@ namespace ChallengeApp
 
 
             statistics.Average /= grades.Count;
-
+                
             switch (statistics.Average)
             {
                 case var average when average >= 80:
